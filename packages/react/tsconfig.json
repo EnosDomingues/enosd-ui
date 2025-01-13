@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+
+    /* Add this for module path mapping */
+    "baseUrl": "./",
+    "paths": {
+      "@enosd-ui/tokens": ["../tokens/src/index"]
+    },
+
+    /* Para gerar arquivos .d.ts e JavaScript diretamente em dist */
+    "declaration": true,
+    "outDir": "./dist",
+    "declarationDir": "./dist", // Coloca os .d.ts na mesma pasta que os .js
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"]
+}

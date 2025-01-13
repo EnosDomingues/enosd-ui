@@ -1,0 +1,30 @@
+{
+  "name": "@enosd-ui/tokens",
+  "version": "1.0.0",
+  "description": "A collection of design tokens defining the visual language for our projects. This package contains color palettes, typography settings, spacing, and other atomic design elements used across all applications for consistent UI/UX.",
+  "author": "Enos Domingues",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "design-tokens",
+    "ui-kit",
+    "design-system",
+    "frontend",
+    "css",
+    "styles"
+  ],
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
+  }
+}

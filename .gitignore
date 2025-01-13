@@ -1,0 +1,71 @@
+# Diretórios gerais
+node_modules/
+dist/
+/public/
+
+# Arquivos de configuração de ambiente e build
+.vscode/
+.idea/
+
+# Arquivos de lock de pacotes
+package-lock.json
+pnpm-lock.yaml
+
+# Dentro da pasta react
+packages/react/dist/
+packages/react/node_modules/
+packages/react/package-lock.json
+packages/react/pnpm-lock.yaml
+
+# Dentro da pasta tokens
+packages/tokens/dist/
+packages/tokens/node_modules/
+packages/tokens/package-lock.json
+packages/tokens/pnpm-lock.yaml
+
+# Outros arquivos temporários ou de build
+*.log
+*.tmp
+.DS_Store
+
+# Adicionais comuns
+/.cache
+/.husky/*
+!/husky.sh
+/.lintstagedrc
+/.prettierrc
+/.prettierignore
+/.editorconfig
+/coverage/
+
+# Arquivos de sistema operacional
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# Arquivos de build específicos
+/build/
+/lib-cov/
+
+# Arquivos de teste
+/coverage/
+/.nyc_output/
+
+# Outros arquivos temporários
+*.swp
+*.swo
+*~
+
+# Arquivos de configuração específicos do ambiente
+.env
+.env.*
+!.env.example
