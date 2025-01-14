@@ -15,7 +15,8 @@ export default defineConfig({
       external: [
         'axe-core', 
         '@storybook/addon-actions', 
-        '@storybook/addon-backgrounds'
+        '@storybook/addon-backgrounds',
+        '@storybook/addon-viewport'
       ], 
     },
   },
