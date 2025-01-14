@@ -19,7 +19,8 @@ export default defineConfig({
         '@storybook/addon-measure',
         '@storybook/addon-outline',
         '@storybook/addon-highlight',
-        '@storybook/addon-viewport'
+        '@storybook/addon-viewport',
+        '@storybook/instrumenter'
       ], 
     },
   },
