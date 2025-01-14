@@ -12,7 +12,11 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['axe-core', '@storybook/addon-actions'], 
+      external: [
+        'axe-core', 
+        '@storybook/addon-actions', 
+        '@storybook/addon-backgrounds'
+      ], 
     },
   },
 });
