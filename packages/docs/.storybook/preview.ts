@@ -4,7 +4,7 @@ import { themes } from "@storybook/theming";
 import '@enosd-ui/react/dist/index.css';
 
 const preview: Preview = {
-  tags: ['autodocs'], // Removi a duplicação do 'autodocs'
+  tags: ['autodocs'],
   parameters: {
     docs: {
       theme: themes.dark,
