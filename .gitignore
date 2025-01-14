@@ -9,7 +9,6 @@ dist/
 
 # Package lock files
 package-lock.json
-pnpm-lock.yaml
 
 # Inside the docs folder
 packages/docs/storybook-static/
