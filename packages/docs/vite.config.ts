@@ -7,7 +7,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '@enosd-ui/react': path.resolve(__dirname, '../react'),
-      '@storybook/core/docs-tools': path.resolve(__dirname, 'node_modules/@storybook/core/docs-tools'),
     },
     preserveSymlinks: true,
   },
