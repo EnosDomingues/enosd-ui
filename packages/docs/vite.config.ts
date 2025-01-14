@@ -18,6 +18,7 @@ export default defineConfig({
         '@storybook/addon-backgrounds',
         '@storybook/addon-measure',
         '@storybook/addon-outline',
+        '@storybook/addon-highlight',
         '@storybook/addon-viewport'
       ], 
     },
