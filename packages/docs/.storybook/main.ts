@@ -21,6 +21,7 @@ const config: StorybookConfig = {
     getAbsolutePath("@storybook/addon-onboarding"),   
     getAbsolutePath("@chromatic-com/storybook"),       
     getAbsolutePath("@storybook/addon-measure"),       
+    getAbsolutePath("@storybook/addon-outline"),       
   ],
   framework: {
     name: getAbsolutePath("@storybook/react-vite"),
