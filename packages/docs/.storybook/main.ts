@@ -26,28 +26,7 @@ const config: StorybookConfig = {
     if (configType === "PRODUCTION") {
       config.base = '/enosd-ui';
     }
-  
-    config.build = {
-      ...config.build,
-      rollupOptions: {
-        ...config.build?.rollupOptions,
-        external: [
-          /^.*\.css$/, 
-          '@enosd-ui/react/dist/index.css', 
-          './sb-preview/runtime.js',
-          '@storybook/addon-essentials'
-        ],
-      },
-    };
-  
-    config.resolve = {
-      ...config.resolve,
-      alias: {
-        ...config.resolve?.alias,
-        '@enosd-ui/react': join(__dirname, '../react/src'),
-      },
-    };
-  
+    
     return config;
   },
 };
