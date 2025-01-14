@@ -31,7 +31,12 @@ const config: StorybookConfig = {
       ...config.build,
       rollupOptions: {
         ...config.build?.rollupOptions,
-        external: [/^.*\.css$/, '@enosd-ui/react/dist/index.css', './sb-preview/runtime.js'],
+        external: [
+          /^.*\.css$/, 
+          '@enosd-ui/react/dist/index.css', 
+          './sb-preview/runtime.js',
+          '@storybook/addon-essentials'
+        ],
       },
     };
   
