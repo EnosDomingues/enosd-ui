@@ -1,5 +1,4 @@
 import type { StorybookConfig } from "@storybook/react-vite";
-
 import { join, dirname } from "path";
 
 /**
@@ -9,6 +8,7 @@ import { join, dirname } from "path";
 function getAbsolutePath(value: string): string {
   return dirname(require.resolve(join(value, "package.json")));
 }
+
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
   addons: [
@@ -26,7 +26,25 @@ const config: StorybookConfig = {
     if (configType === "PRODUCTION") {
       config.base = '/enosd-ui';
     }
+
+    config.build = {
+      ...config.build,
+      rollupOptions: {
+        ...config.build?.rollupOptions,
+        external: [/^.*\.css$/, '@enosd-ui/react/dist/index.css'],
+      },
+    };
+
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        ...config.resolve?.alias,
+        '@enosd-ui/react': join(__dirname, '../react/src'),
+      },
+    };
+
     return config;
   },
 };
+
 export default config;
