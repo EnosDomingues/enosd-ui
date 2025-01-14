@@ -12,6 +12,9 @@ const config: Config = {
         default: [fonts.default],
         code: [fonts.code],
       },
+      boxShadow: {
+        button: `3px 3px ${colors.gray100}`
+      }
     }
   },
   plugins: [],

@@ -22,5 +22,11 @@ const config: StorybookConfig = {
     name: getAbsolutePath("@storybook/react-vite"),
     options: {},
   },
+  viteFinal: async (config, { configType }) => {
+    if (configType === "PRODUCTION") {
+      config.base = '/enosd-ui';
+    }
+    return config;
+  },
 };
 export default config;
