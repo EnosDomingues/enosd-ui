@@ -14,6 +14,7 @@ export default defineConfig({
     rollupOptions: {
       external: [
         'axe-core', 
+        '@storybook/addon-essentials', 
         '@storybook/addon-actions', 
         '@storybook/addon-backgrounds',
         '@storybook/addon-measure',
