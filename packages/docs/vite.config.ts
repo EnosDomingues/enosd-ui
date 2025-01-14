@@ -15,6 +15,7 @@ export default defineConfig({
       external: [
         'axe-core', 
         'ts-dedent', 
+        'tiny-invariant', 
         '@storybook/addon-actions', 
         '@storybook/addon-backgrounds',
         '@storybook/addon-measure',
