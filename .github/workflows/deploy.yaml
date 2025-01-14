@@ -1,0 +1,56 @@
+name: Deploy Storybook
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+
+    - name: Set up pnpm
+      uses: pnpm/action-setup@v2.0.1
+      with:
+        version: 8
+
+    - name: Cache pnpm store
+      uses: actions/cache@v2
+      with:
+        path: ~/.pnpm-store
+        key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-store-
+
+    - name: Set pnpm store path
+      run: pnpm config set store-dir ~/.pnpm-store
+
+    - name: Clean pnpm store
+      run: pnpm store prune --store-dir=~/.pnpm-store
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: List directory contents
+      run: ls -la
+
+    - name: Check current directory
+      run: pwd
+
+    - name: Build Storybook
+      working-directory: ./packages/docs 
+      run: pnpm run build-storybook
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./packages/docs/storybook-static

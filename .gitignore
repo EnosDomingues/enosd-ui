@@ -1,0 +1,73 @@
+# General directories
+node_modules/
+dist/
+/public/
+
+# Environment and build configuration files
+.vscode/
+.idea/
+
+# Package lock files
+package-lock.json
+
+# Inside the docs folder
+packages/docs/storybook-static/
+
+# Inside the react folder
+packages/react/dist/
+packages/react/node_modules/
+packages/react/package-lock.json
+packages/react/pnpm-lock.yaml
+
+# Inside the tokens folder
+packages/tokens/dist/
+packages/tokens/node_modules/
+packages/tokens/package-lock.json
+packages/tokens/pnpm-lock.yaml
+
+# Other temporary or build files
+*.log
+*.tmp
+.DS_Store
+
+# Common additions
+/.cache
+/.husky/*
+!/husky.sh
+/.lintstagedrc
+/.prettierrc
+/.prettierignore
+/.editorconfig
+/coverage/
+
+# Operating system files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# Specific build files
+/build/
+/lib-cov/
+
+# Test files
+/coverage/
+/.nyc_output/
+
+# Other temporary files
+*.swp
+*.swo
+*~
+
+# Environment-specific configuration files
+.env
+.env.*
+!.env.example
