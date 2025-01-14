@@ -12,7 +12,8 @@
   "dependencies": {
     "@enosd-ui/react": "workspace:*",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "ts-dedent": "^2.2.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.3",

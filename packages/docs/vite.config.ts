@@ -14,6 +14,7 @@ export default defineConfig({
     rollupOptions: {
       external: [
         'axe-core', 
+        'ts-dedent', 
         '@storybook/addon-actions', 
         '@storybook/addon-backgrounds',
         '@storybook/addon-measure',
